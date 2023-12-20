@@ -28,6 +28,8 @@ export class EmployeeProfileComponent implements OnInit {
 
   addEmployee(name: string, email: string): void {
     this.store.dispatch(new AddEmployee({ name, email } as Employee));
+    this.form.reset();
+    console.log(this.form.value);
   }
 
  
