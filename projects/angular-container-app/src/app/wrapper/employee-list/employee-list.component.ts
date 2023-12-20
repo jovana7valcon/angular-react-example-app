@@ -9,10 +9,10 @@ const containerElementName = 'customReactComponentContainer';
 
 @Component({
   selector: 'app-employee-list',
-  template: ` <h2 style="color: cadetblue">Employee List (React Microfrontend)</h2>
+  template: ` <h2 style="color: rgb(6, 139, 84); text-align: center;">Employee List (React Microfrontend)</h2>
     <div style="font-family: Inter, sans-serif; color: rgb(140, 137, 137, 1); font-size: 13px">
       This employee list component is being remotely loaded into the application from React App using
-      Webpack Module Federation
+      Webpack Module Federation.
     </div>
     <span #${containerElementName}></span>`,
   encapsulation: ViewEncapsulation.None,
@@ -58,3 +58,4 @@ export class EmployeeListComponent {
     this.root.unmountComponentAtNode(this.containerRef.nativeElement);
   }
 }
+
